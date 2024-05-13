@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemperatureConverterApp.MainPage">
+    <StackLayout Padding="20">
+        <Label Text="Temperature Converter" FontSize="24" HorizontalOptions="Center" Margin="0,20"/>
+        <Picker x:Name="conversionPicker" Title="Select conversion">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Celsius to Fahrenheit</x:String>
+                    <x:String>Fahrenheit to Celsius</x:String>
+                    <x:String>Celsius to Kelvin</x:String>
+                    <x:String>Kelvin to Celsius</x:String>
+                    <x:String>Fahrenheit to Kelvin</x:String>
+                    <x:String>Kelvin to Fahrenheit</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Entry x:Name="temperatureEntry" Placeholder="Enter temperature" Keyboard="Numeric"/>
+        <Button Text="Convert" Clicked="OnConvertClicked"/>
+        <Label x:Name="resultLabel" FontSize="18" HorizontalOptions="Center" Margin="0,20"/>
+    </StackLayout>
+</ContentPage>
